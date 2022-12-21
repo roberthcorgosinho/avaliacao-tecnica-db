@@ -1,0 +1,483 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Aplicação de exemplo para avaliação em entrevista",
+    "version": "1.0.0.22",
+    "title": "Avaliação-DB",
+    "contact": {
+      "email": "roberth.corgosinho@gmail.com"
+    }
+  },
+  "host": "localhost:8080",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Pautas",
+      "description": "Gerenciamento das Pautas"
+    }
+  ],
+  "schemes": [
+    "https",
+    "http"
+  ],
+  "paths": {
+    "/pautas": {
+      "get": {
+        "tags": [
+          "Pautas"
+        ],
+        "summary": "Lista todas as Pautas cadastradas",
+        "operationId": "listarTodos",
+        "consumes": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Operação com sucesso",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Pauta"
+              }
+            }
+          },
+          "500": {
+            "description": "Erro ao pesquisar objeto."
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Pautas"
+        ],
+        "summary": "Adiciona uma nova Pauta.",
+        "operationId": "adicionar",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "pauta",
+            "description": "Objeto de Pauta necessário para inclusão.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Pauta"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Operação com sucesso",
+            "schema": {
+              "$ref": "#/definitions/Pauta"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/pautas/{id}": {
+      "get": {
+        "tags": [
+          "Pautas"
+        ],
+        "summary": "Consulta uma entidade de Pauta pelo ID",
+        "operationId": "obterPauta",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID da entidade de Pauta a ser retornada.",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operação realizada com sucesso.",
+            "schema": {
+              "$ref": "#/definitions/Pauta"
+            }
+          },
+          "404": {
+            "description": "Não foi possível encontrar a Pauta desejada"
+          }
+        }
+      }
+    },
+    "/pautas/{id}/resultado-votacao": {
+      "get": {
+        "tags": [
+          "Pautas"
+        ],
+        "summary": "Consulta o resultado da votação de uma pauta",
+        "operationId": "obterResultadoVotacaoPauta",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID da entidade de Pauta a ser consultada.",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operação realizada com sucesso.",
+            "schema": {
+              "$ref": "#/definitions/ResultadoVotacaoDTO"
+            }
+          },
+          "404": {
+            "description": "Não foi possível encontrar a Pauta desejada"
+          }
+        }
+      }
+    },
+    "/pautas/{id}/abrir-votacao": {
+      "post": {
+        "tags": [
+          "Pautas"
+        ],
+        "summary": "Abre uma sessão de votação para uma determinada pauta",
+        "operationId": "adicionarSessaoVotacao",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID da entidade de Pauta a ser consultada.",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "sessao",
+            "description": "Objeto de SessaoVotacao necessário para inclusão.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/SessaoVotacao"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operação realizada com sucesso.",
+            "schema": {
+              "$ref": "#/definitions/ResultadoVotacaoDTO"
+            }
+          },
+          "404": {
+            "description": "Não foi possível encontrar a Pauta desejada"
+          },
+          "409": {
+            "description": "Já existe uma sessão de votação para a pauta especificada"
+          }
+        }
+      }
+    },
+    "/pautas/{id}/votar": {
+      "post": {
+        "tags": [
+          "Pautas"
+        ],
+        "summary": "Computa um voto na sessão de votação de uma pauta",
+        "operationId": "votar",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID da entidade de Pauta a ser consultada.",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "voto",
+            "description": "Objeto de Voto necessário para inclusão.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Voto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operação realizada com sucesso.",
+            "schema": {
+              "$ref": "#/definitions/ResultadoVotacaoDTO"
+            }
+          },
+          "404": {
+            "description": "Não foi possível encontrar a Pauta desejada"
+          },
+          "409": {
+            "description": "Já existe uma sessão de votação para a pauta especificada"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Pauta": {
+      "description": "Objeto que define o que é uma pauta",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "Campo de autoincremento identificador da entidade",
+          "allOf": [
+            {
+              "$ref": "#/definitions/TypeLong"
+            }
+          ]
+        },
+        "assunto": {
+          "description": "Assunto da Pauta",
+          "allOf": [
+            {
+              "$ref": "#/definitions/TypeString"
+            }
+          ]
+        },
+        "sessaoVotacao": {
+          "description": "Objeto do tipo SessaoVotacao que define uma sessão de votação da Pauta",
+          "allOf": [
+            {
+              "$ref": "#/definitions/SessaoVotacao"
+            }
+          ]
+        },
+        "resultado": {
+          "readOnly": true,
+          "description": "Campo transiente contendo um objeto com o resultado da votação",
+          "allOf": [
+            {
+              "$ref": "#/definitions/ResultadoVotacaoDTO"
+            }
+          ]
+        }
+      },
+      "required": [
+        "assunto"
+      ]
+    },
+    "ResultadoVotacaoDTO": {
+      "description": "Objeto transient contendo o somatório dos votos de uma sessão de votação de uma pauta",
+      "type": "object",
+      "properties": {
+        "totalVotos": {
+          "description": "Total de votos da Pauta",
+          "allOf": [
+            {
+              "$ref": "#/definitions/TypeLong"
+            }
+          ]
+        },
+        "totalVotosSim": {
+          "description": "Total de votos da opção Sim",
+          "allOf": [
+            {
+              "$ref": "#/definitions/TypeLong"
+            }
+          ]
+        },
+        "totalVotosNao": {
+          "description": "Total de votos da opção Sim",
+          "allOf": [
+            {
+              "$ref": "#/definitions/TypeLong"
+            }
+          ]
+        }
+      }
+    },
+    "SessaoVotacao": {
+      "description": "Objeto que define o que é uma uma Sessão de Votação de uma Pauta",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "Campo de autoincremento identificador da entidade",
+          "allOf": [
+            {
+              "$ref": "#/definitions/TypeLong"
+            }
+          ]
+        },
+        "duracaoEmMinutos": {
+          "description": "Tempo de duração da sessão em minutos",
+          "allOf": [
+            {
+              "$ref": "#/definitions/TypeInteger"
+            }
+          ]
+        },
+        "dataHoraCriacao": {
+          "description": "Data e hora da abertura da sessão de votação",
+          "allOf": [
+            {
+              "$ref": "#/definitions/TypeDateTime"
+            }
+          ]
+        },
+        "pauta": {
+          "description": "Objeto do tipo pauta que vincula a sessão de votação a pauta",
+          "allOf": [
+            {
+              "$ref": "#/definitions/Pauta"
+            }
+          ]
+        },
+        "votos": {
+          "description": "Objeto do tipo Voto que vincula os votos dados em uma sessão de votação de uma pauta",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Voto"
+          }
+        }
+      },
+      "required": [
+        "pauta"
+      ]
+    },
+    "VotoId": {
+      "description": "Objeto que define a chave composta da entidade Voto",
+      "type": "object",
+      "properties": {
+        "cpf": {
+          "description": "CPF identificador do usuário votante",
+          "allOf": [
+            {
+              "$ref": "#/definitions/TypeString"
+            }
+          ]
+        },
+        "idSessaoVotacao": {
+          "description": "ID da Sessão de Votação",
+          "allOf": [
+            {
+              "$ref": "#/definitions/TypeLong"
+            }
+          ]
+        }
+      },
+      "required": [
+        "cpf",
+        "idSessaoVotacao"
+      ]
+    },
+    "Voto": {
+      "description": "Objeto que define o que é um Voto de uma Sessão de Votação de uma Pauta",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "Objeto de chave composta que identifica o votante e a sessão de votação",
+          "allOf": [
+            {
+              "$ref": "#/definitions/VotoId"
+            }
+          ]
+        },
+        "opcao": {
+          "description": "Opção escolhida pelo usuário votante (pode ser SIM ou NÃO)",
+          "allOf": [
+            {
+              "$ref": "#/definitions/TypeString"
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "opcao"
+      ]
+    },
+    "TypeInteger": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "TypeShort": {
+      "type": "integer"
+    },
+    "TypeLong": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "TypeBigDecimal": {
+      "type": "number",
+      "format": "float"
+    },
+    "TypeFloat": {
+      "type": "number",
+      "format": "float"
+    },
+    "TypeDouble": {
+      "type": "number",
+      "format": "double"
+    },
+    "TypeString": {
+      "type": "string"
+    },
+    "TypeClob": {
+      "type": "string"
+    },
+    "TypeDateTimeDB": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "TypeDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "TypeDateTime": {
+      "$ref": "#/definitions/TypeDateTimeDB"
+    },
+    "TypeFile": {
+      "type": "string",
+      "format": "binary"
+    },
+    "TypeBase64Enconde": {
+      "type": "string",
+      "format": "byte"
+    },
+    "TypeBoolean": {
+      "type": "boolean",
+      "example": true
+    },
+    "TypeObject": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/TypeNull"
+        }
+      ],
+      "description": "Qualquer tipo/objeto informado no generics"
+    },
+    "TypeNull": {}
+  }
+}
