@@ -14,7 +14,7 @@ public class TratadorDeErros {
         }
         return ResponseEntity.notFound().build();
     }
-    
+
     @ExceptionHandler(PautaConflictException.class)
     public ResponseEntity tratarErroPautaConflictException(PautaConflictException ex) {
         return ResponseEntity.status(HttpStatus.CONFLICT).body(ex.getMessage());
@@ -33,6 +33,17 @@ public class TratadorDeErros {
     @ExceptionHandler(PautaNotFoundException.class)
     public ResponseEntity tratarErroPautaNotFoundException(PautaNotFoundException ex) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
+    }
+
+    @ExceptionHandler(java.lang.IllegalArgumentException.class)
+    public ResponseEntity tratarErroIllegalArgumentException(java.lang.IllegalArgumentException ex) {
+        String message = "";
+        if (ex.getMessage().toLowerCase().contains("enumrespostavotacao")) {
+            message = "Opção inválida para votação!";
+        } else {
+            message = ex.getMessage();
+        }
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(message);
     }
 
 }

@@ -116,8 +116,11 @@ public class PautaController {
 	@PostMapping("/{id}/votar")
 	@ResponseStatus(HttpStatus.CREATED)
 	@Transactional
-	public ResponseEntity votar(@PathVariable Long id, @RequestBody VotoDTO votoDTO) throws Exception {
+	public ResponseEntity votar(@PathVariable Long id, @RequestBody @Valid VotoDTO votoDTO) throws Exception {
 		Pauta pauta = pautaService.obterPauta(id);
+		if (pauta.getSessaoVotacao() == null) {
+			throw new PautaNotFoundException("Não existe sessão de votação aberta");
+		}
 		if (sessaoVotacaoService.isSessaoVotacaoAberta(pauta.getSessaoVotacao())) {
 			if (sessaoVotacaoService.podeVotar(votoDTO.cpf())) {
 				Voto voto = new Voto();
