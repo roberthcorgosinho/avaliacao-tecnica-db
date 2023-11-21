@@ -1,5 +1,7 @@
 package br.com.roberth.avaliacaoTecnica.model.entidades;
 
+import br.com.roberth.avaliacaoTecnica.model.dto.PautaDTO;
+import br.com.roberth.avaliacaoTecnica.model.dto.PautaUpdateDTO;
 import br.com.roberth.avaliacaoTecnica.model.dto.ResultadoVotacaoDTO;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -9,10 +11,14 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Transient;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Pauta {
 	
 	@Id 
@@ -29,5 +35,15 @@ public class Pauta {
 	
 	@Transient
 	private ResultadoVotacaoDTO resultado;
+
+	public Pauta(PautaDTO pauta) {
+		this.assunto = pauta.assunto();
+	}
+
+	public void atualizarDados(PautaUpdateDTO dados) {
+		if (dados.assunto() != null) {
+			this.assunto = dados.assunto();
+		}
+	}
 
 }

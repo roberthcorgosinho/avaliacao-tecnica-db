@@ -1,16 +1,5 @@
 package br.com.roberth.avaliacaoTecnica.model.dto;
 
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
-public class ResultadoVotacaoDTO {
-	
-	private Long totalVotos;
-	
-	private Long totalSim;
-	
-	private Long totalNao;
+public record ResultadoVotacaoDTO (String assuntoPauta, Long totalVotos, Long totalSim, Long totalNao) {
 
 }

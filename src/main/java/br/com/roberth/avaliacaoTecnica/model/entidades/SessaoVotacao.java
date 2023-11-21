@@ -3,6 +3,7 @@ package br.com.roberth.avaliacaoTecnica.model.entidades;
 import java.util.Date;
 import java.util.List;
 
+import br.com.roberth.avaliacaoTecnica.model.dto.SessaoVotacaoDTO;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Column;
@@ -15,10 +16,14 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class SessaoVotacao {
 	
 	@Id
@@ -38,6 +43,10 @@ public class SessaoVotacao {
 	
 	@OneToMany(fetch = FetchType.EAGER, mappedBy = "sessaoVotacao")    
 	private List<Voto> votos;
+
+	public SessaoVotacao(SessaoVotacaoDTO dados) {
+		this.duracaoEmMinutos = dados.duracaoEmMinutos();
+	}
 	
 	@PrePersist
 	public void preInsert() {

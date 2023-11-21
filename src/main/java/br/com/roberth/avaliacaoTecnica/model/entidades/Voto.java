@@ -1,11 +1,9 @@
 package br.com.roberth.avaliacaoTecnica.model.entidades;
 
+import br.com.roberth.avaliacaoTecnica.enums.EnumRespostaVotacao;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import jakarta.persistence.EmbeddedId;
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
@@ -14,8 +12,9 @@ public class Voto {
 	
 	@EmbeddedId
 	private VotoId id;
-	
-	private String opcao;
+
+	@Enumerated(EnumType.STRING)
+	private EnumRespostaVotacao opcao;
 	
 	@ManyToOne
 	@JoinColumn(name="IdSessaoVotacao", insertable=false, updatable=false)

@@ -16,7 +16,7 @@ public class VotoService {
 	private VotoRepository votoRepository;
 	
 	public Voto adicionarVoto(Voto voto) {
-		voto.setOpcao(voto.getOpcao().toUpperCase());
+		voto.setOpcao(voto.getOpcao());
 		return votoRepository.save(voto);
 	}
 	
@@ -38,7 +38,7 @@ public class VotoService {
 		Voto voto = new Voto();
 		voto.setId(new VotoId());
 		voto.getId().setIdSessaoVotacao(idSessao);
-		voto.setOpcao(EnumRespostaVotacao.SIM.getDescricao().toUpperCase());
+		voto.setOpcao(EnumRespostaVotacao.SIM);
 		return votoRepository.count(Example.of(voto));
 	}
 	
@@ -46,7 +46,7 @@ public class VotoService {
 		Voto voto = new Voto();
 		voto.setId(new VotoId());
 		voto.getId().setIdSessaoVotacao(idSessao);
-		voto.setOpcao(EnumRespostaVotacao.NAO.getDescricao().toUpperCase());
+		voto.setOpcao(EnumRespostaVotacao.NAO);
 		return votoRepository.count(Example.of(voto));
 	}
 
