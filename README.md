@@ -67,6 +67,10 @@ Exemplos de retorno do serviço
 
 ○ Como você versionaria a API da sua aplicação? Que estratégia usar?
 
+- Resposta: Versionamento com GIT ou outro controlador de versão. Documentação do código-fonte 
+conforme as especificações do javaDoc e o uso de alguma ferramenta como o Swagger 
+para disponibilizar a documentação dos endpoints da api.
+
 ### O que será analisado
 
 - Simplicidade no design da solução (evitar over engineering)
