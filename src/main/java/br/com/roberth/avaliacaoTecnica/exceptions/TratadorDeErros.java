@@ -14,4 +14,25 @@ public class TratadorDeErros {
         }
         return ResponseEntity.notFound().build();
     }
+    
+    @ExceptionHandler(PautaConflictException.class)
+    public ResponseEntity tratarErroPautaConflictException(PautaConflictException ex) {
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(ex.getMessage());
+    }
+
+    @ExceptionHandler(PautaBadRequestException.class)
+    public ResponseEntity tratarErroPautaBadRequestException(PautaBadRequestException ex) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
+    }
+
+    @ExceptionHandler(PautaForbbidenExeception.class)
+    public ResponseEntity tratarErroPautaForbbidenExeception(PautaForbbidenExeception ex) {
+        return ResponseEntity.status(HttpStatus.FORBIDDEN).body(ex.getMessage());
+    }
+
+    @ExceptionHandler(PautaNotFoundException.class)
+    public ResponseEntity tratarErroPautaNotFoundException(PautaNotFoundException ex) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
+    }
+
 }
