@@ -134,3 +134,5 @@ O aplicativo envia uma requisição POST para a url informada e com o body defin
 Gostaria de ter feito um trabalho melhor, no entanto, fazendo este teste e trabalhando simultâneamente
 não tive tempo hábil para fazer algo mais adequado, mais performático e com melhores práticas 
 tanto de codificação quanto de documentação.
+
+- No arquivo DBServer.postman_collection.json existem as chamadas dos endpoints para testes
