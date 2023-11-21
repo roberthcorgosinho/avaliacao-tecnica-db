@@ -1,7 +1,5 @@
 package br.com.roberth.avaliacaoTecnica.services;
 
-import br.com.roberth.avaliacaoTecnica.exceptions.PautaBadRequestException;
-import br.com.roberth.avaliacaoTecnica.exceptions.PautaInternalErrorException;
 import br.com.roberth.avaliacaoTecnica.exceptions.PautaNotFoundException;
 import br.com.roberth.avaliacaoTecnica.model.dto.PautaDTO;
 import br.com.roberth.avaliacaoTecnica.model.dto.PautaUpdateDTO;
