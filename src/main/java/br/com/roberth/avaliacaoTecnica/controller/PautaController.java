@@ -1,20 +1,22 @@
 package br.com.roberth.avaliacaoTecnica.controller;
 
-import br.com.roberth.avaliacaoTecnica.enums.EnumRespostaVotacao;
 import br.com.roberth.avaliacaoTecnica.exceptions.PautaBadRequestException;
-import br.com.roberth.avaliacaoTecnica.exceptions.PautaConflictException;
-import br.com.roberth.avaliacaoTecnica.exceptions.PautaForbbidenExeception;
 import br.com.roberth.avaliacaoTecnica.exceptions.PautaNotFoundException;
-import br.com.roberth.avaliacaoTecnica.model.dto.*;
-import br.com.roberth.avaliacaoTecnica.model.entidades.Pauta;
-import br.com.roberth.avaliacaoTecnica.model.entidades.SessaoVotacao;
-import br.com.roberth.avaliacaoTecnica.model.entidades.Voto;
-import br.com.roberth.avaliacaoTecnica.model.entidades.VotoId;
+import br.com.roberth.avaliacaoTecnica.model.dto.DadosErroValidacaoDTO;
+import br.com.roberth.avaliacaoTecnica.model.dto.PautaDadosDTO;
+import br.com.roberth.avaliacaoTecnica.model.dto.ResultadoVotacaoDTO;
 import br.com.roberth.avaliacaoTecnica.services.PautaService;
-import br.com.roberth.avaliacaoTecnica.services.SessaoVotacaoService;
 import br.com.roberth.avaliacaoTecnica.services.VotoService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
+import org.springdoc.core.annotations.ParameterObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
@@ -24,130 +26,172 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 
 @RestController
 @RequestMapping("/pautas")
+@Tag(description = "Gestão das pautas cadastradas para votação", name = "Pautas")
 public class PautaController {
 	
 	@Autowired
 	private PautaService pautaService;
-	
+
 	@Autowired
 	private VotoService votoService;
-	
-	@Autowired
-	private SessaoVotacaoService sessaoVotacaoService;
 
-	@PostMapping("/adicionarEmMassa")
+	/**
+	 * adicionarPautaEmLote
+	 *
+	 * Endpoint que possibilita adicionar colecao de pautas simultaneamente
+	 *
+	 * @param pautas: A colecao de pautas a serem cadastradas
+	 * @return ResponseEntity: A colecao de pautas criadas
+	 * @throws PautaBadRequestException
+	 */
+	@PostMapping("/adicionar-em-massa")
 	@Transactional
-	public ResponseEntity adicionarPautaEmLote(@RequestBody @Valid Collection<PautaDTO> pautas) throws Exception {
-		try {
-			Collection<Pauta> pautasCriadas = new HashSet<>();
-			for (PautaDTO pautaDTO : pautas) {
-				pautasCriadas.add(pautaService.adicionarPauta(new Pauta(pautaDTO)));
-			}
-			return ResponseEntity.status(HttpStatus.CREATED).body(pautasCriadas.stream().map(PautaDTO::new));
-		} catch (Exception e) {
-			throw new Exception(e);
+	@Operation(summary = "Adicionar em massa (lote)", description = "Possibilita adicionar coleção de pautas simultâneamente")
+	public ResponseEntity adicionarPautaEmLote(@RequestBody @Valid Collection<PautaDadosDTO> pautas) throws PautaBadRequestException {
+		Collection<PautaDadosDTO> pautasCriadas = new HashSet<>();
+		for (PautaDadosDTO pautaDTO : pautas) {
+			pautasCriadas.add(pautaService.adicionarPauta(pautaDTO));
 		}
+		return ResponseEntity.status(HttpStatus.CREATED).body(pautasCriadas);
 	}
 
+	/**
+	 * adicionarPautaEmLote
+	 *
+	 * Endpoint que possibilita adicionar uma pauta
+	 *
+	 * @param pauta
+	 * @param uriBuilder (injetado automaticamente pelo spring)
+	 * @return ResponseEntity: Informacoes da pauta criada
+	 * @throws PautaBadRequestException
+	 */
 	@PostMapping
 	@Transactional
-	public ResponseEntity adicionarPauta(@RequestBody @Valid PautaDTO pauta, UriComponentsBuilder uriBuilder) throws Exception {
-		try {
-			Pauta pautaCriada = pautaService.adicionarPauta(new Pauta(pauta));
-			URI uri = uriBuilder.path("/pautas/{id}").buildAndExpand(pautaCriada.getId()).toUri();
-			return ResponseEntity.created(uri).body(new PautaDTO(pautaCriada));
-		} catch (Exception e) {
-			throw new Exception(e);
-		}
+	@Operation(summary = "Adicionar pauta", description = "Adiciona uma pauta de votação")
+	public ResponseEntity adicionarPauta(@RequestBody @Valid PautaDadosDTO pauta, UriComponentsBuilder uriBuilder) throws PautaBadRequestException {
+		PautaDadosDTO pautaCriada = pautaService.adicionarPauta(pauta);
+		URI uri = uriBuilder.path("/pautas/{idPauta}").buildAndExpand(pautaCriada.id()).toUri();
+		return ResponseEntity.created(uri).body(pautaCriada);
 	}
 
-	@PutMapping
-	@Transactional
-	public ResponseEntity atualizarPauta(@RequestBody @Valid PautaUpdateDTO pauta) throws Exception {
-		try {
-			Pauta pautaAtualizada = pautaService.atualizarPauta(pauta);
-			return ResponseEntity.status(HttpStatus.OK).body(pautaAtualizada);
-		} catch (Exception e) {
-			throw new Exception(e);
-		}
-	}
-
-	@GetMapping
-	public ResponseEntity listarTodos(@PageableDefault(size = 10, sort = {"assunto"}) Pageable paginacao) throws Exception {
-		try {
-			return ResponseEntity.status(HttpStatus.OK).body(pautaService.listarPautas(paginacao));
-		} catch (Exception e) {
-			throw new Exception(e);
-		}
-	}
-
-	@GetMapping("/{id}")
-	public ResponseEntity obterPautaPorId(@PathVariable Long id) throws Exception {
-		try {
-			return ResponseEntity.status(HttpStatus.OK).body(pautaService.obterPauta(id));
-		} catch (Exception e) {
-			throw new Exception(e);
-		}
-	}
-	
-	@GetMapping("/{id}/resultado-votacao")
-	public ResponseEntity obterResultadoVotacaoPauta(@PathVariable Long id) throws Exception {
-		return ResponseEntity.ok(pautaService.resultadoVotacaoPauta(id));
-	}	
-	
-	@PostMapping("/{id}/abrir-votacao")
-	@ResponseStatus(HttpStatus.CREATED)
-	@Transactional
-	public ResponseEntity adicionarSessaoVotacao(@PathVariable Long id, @RequestBody SessaoVotacaoDTO sessao) throws Exception {
-		Pauta pauta = pautaService.obterPauta(id);
-		SessaoVotacao sessaoVotacao = new SessaoVotacao(sessao);
-		sessaoVotacao.setPauta(pauta);
-		sessaoVotacao = sessaoVotacaoService.adicionarSessao(sessaoVotacao);
-		pauta.setSessaoVotacao(sessaoVotacao);
-		return ResponseEntity.ok(pautaService.atualizarPauta(pauta));
-	}
-	
-	@PostMapping("/{id}/votar")
-	@ResponseStatus(HttpStatus.CREATED)
-	@Transactional
-	public ResponseEntity votar(@PathVariable Long id, @RequestBody @Valid VotoDTO votoDTO) throws Exception {
-		Pauta pauta = pautaService.obterPauta(id);
-		if (pauta.getSessaoVotacao() == null) {
-			throw new PautaNotFoundException("Não existe sessão de votação aberta");
-		}
-		if (sessaoVotacaoService.isSessaoVotacaoAberta(pauta.getSessaoVotacao())) {
-			if (sessaoVotacaoService.podeVotar(votoDTO.cpf())) {
-				Voto voto = new Voto();
-				voto.setId(new VotoId(votoDTO.cpf(), pauta.getSessaoVotacao().getId()));
-				voto.setSessaoVotacao(pauta.getSessaoVotacao());
-				voto.setOpcao(EnumRespostaVotacao.valueOf(votoDTO.opcao()));
-				if (votoService.existeVoto(voto)) {
-					throw new PautaConflictException("O usuário " + voto.getId().getCpf() + " já votou na Pauta " + id);
-				} else if (
-					voto.getOpcao().getDescricao().equalsIgnoreCase(EnumRespostaVotacao.NAO.getDescricao()) ||
-					voto.getOpcao().getDescricao().equalsIgnoreCase(EnumRespostaVotacao.SIM.getDescricao())
-				) {
-					voto = votoService.adicionarVoto(voto);
-					if (pauta.getSessaoVotacao().getVotos() == null) {
-						pauta.getSessaoVotacao().setVotos(new ArrayList<>());
+	/**
+	 * listarTodas
+	 *
+	 * Endpoint que retorna uma colecao, paginada, contendo todas as pautas cadastradas
+	 *
+	 * @param paginacao: criterios para paginacao e ordenacao
+	 * @return ResponseEntity: a lista paginada das pautas cadastradas
+	 * @throws PautaNotFoundException
+	 */
+	@ApiResponses(value = {
+			@ApiResponse(
+					responseCode = "200", description = "Pautas encontradas",
+					content = {
+							@Content(
+									mediaType = "application/json",
+									schema = @Schema(
+											implementation = Page.class
+									)
+							)
 					}
-					pauta.getSessaoVotacao().getVotos().add(voto);
-				} else {
-					throw new PautaBadRequestException("Opção de votação inválida");
-				}
-			} else {
-				throw new PautaForbbidenExeception("O usuário " + votoDTO.cpf() + " não está autorizado a votar na pauta " + id);
-			}
-		} else {
-			throw new PautaNotFoundException("Não existe sessão de votação aberta para a pauta " + id);
-		}
-		return ResponseEntity.ok(pautaService.atualizarPauta(pauta));
+			),
+			@ApiResponse(
+					responseCode = "404", description = "Não existem pautas cadastradas",
+					content = {
+							@Content(
+									mediaType = "application/json",
+									schema = @Schema(
+										implementation = DadosErroValidacaoDTO.class
+									)
+							)
+					}
+			)
+	})
+	@GetMapping
+	@Operation(summary = "Listagem de pautas", description = "Lista paginada de todas as pautas cadastradas")
+	public ResponseEntity listarTodas(@ParameterObject @PageableDefault(size = 10, sort = {"assunto"}) Pageable paginacao) throws PautaNotFoundException {
+		return ResponseEntity.status(HttpStatus.OK).body(pautaService.listarPautas(paginacao));
+	}
+
+	/**
+	 * obterPautaPorId
+	 *
+	 * Endpoint que retorna uma pauta especifica atraves do seu ID
+	 *
+	 * @param idPauta
+	 * @return
+	 */
+	@ApiResponses(value = {
+			@ApiResponse(
+					responseCode = "200", description = "Pauta encontrada",
+					content = {
+							@Content(
+									mediaType = "application/json",
+									schema = @Schema(
+											implementation = PautaDadosDTO.class
+									)
+							)
+					}
+			),
+			@ApiResponse(
+					responseCode = "404", description = "Não existem pautas cadastradas",
+					content = {
+							@Content(
+									mediaType = "application/json",
+									schema = @Schema(
+											implementation = DadosErroValidacaoDTO.class
+									)
+							)
+					}
+			)
+	})
+	@GetMapping("/{idPauta}")
+	@Operation(summary = "Consulta de pauta", description = "Retorna uma pauta específica com base em seu ID")
+	public ResponseEntity obterPautaPorId(@PathVariable Long idPauta) {
+		return ResponseEntity.status(HttpStatus.OK).body(pautaService.obterPauta(idPauta));
+	}
+
+	/**
+	 * totalizarVotos
+	 *
+	 * Endpoint que totaliza os votos realizados na sessao de votacao atribuida a pauta
+	 *
+	 * @param idPauta
+	 * @return
+	 */
+	@ApiResponses(value = {
+			@ApiResponse(
+					responseCode = "200", description = "Votos computados",
+					content = {
+							@Content(
+									mediaType = "application/json",
+									schema = @Schema(
+											implementation = ResultadoVotacaoDTO.class
+									)
+							)
+					}
+			),
+			@ApiResponse(
+					responseCode = "404", description = "Não existem pautas cadastradas",
+					content = {
+							@Content(
+									mediaType = "application/json",
+									schema = @Schema(
+											implementation = DadosErroValidacaoDTO.class
+									)
+							)
+					}
+			)
+	})
+	@GetMapping("/totalizar-votos/{idPauta}")
+	@Operation(summary = "Total de votos", description = "Informa a totalidade de votos de uma pauta específica com base em seu ID")
+	public ResponseEntity totalizarVotos(@PathVariable Long idPauta) {
+		return ResponseEntity.status(HttpStatus.OK).body(votoService.resultadoVotacao(idPauta));
 	}
 
 }

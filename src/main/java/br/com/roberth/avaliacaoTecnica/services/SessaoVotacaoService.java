@@ -1,37 +1,69 @@
 package br.com.roberth.avaliacaoTecnica.services;
 
-import java.util.Calendar;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.env.Environment;
-import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
-
+import br.com.roberth.avaliacaoTecnica.exceptions.PautaBadRequestException;
 import br.com.roberth.avaliacaoTecnica.exceptions.PautaConflictException;
-import br.com.roberth.avaliacaoTecnica.exceptions.PautaInternalErrorException;
-import br.com.roberth.avaliacaoTecnica.model.dto.UserStatusResponseRestApiDTO;
+import br.com.roberth.avaliacaoTecnica.exceptions.PautaNotFoundException;
+import br.com.roberth.avaliacaoTecnica.model.dto.SessaoVotacaoDadosDTO;
+import br.com.roberth.avaliacaoTecnica.model.entidades.Pauta;
 import br.com.roberth.avaliacaoTecnica.model.entidades.SessaoVotacao;
+import br.com.roberth.avaliacaoTecnica.repository.PautaRepository;
 import br.com.roberth.avaliacaoTecnica.repository.SessaoVotacaoRepository;
-import br.com.roberth.avaliacaoTecnica.util.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.Calendar;
+import java.util.Optional;
 
 @Service
 public class SessaoVotacaoService {
-	
-	@Autowired
-	private Environment env;
-	
+
 	@Autowired
 	private SessaoVotacaoRepository sessaoVotacaoRepository;
-	
-	public SessaoVotacao adicionarSessao(SessaoVotacao sessao) throws PautaConflictException {
-		if (sessao.getPauta().getSessaoVotacao() != null && sessao.getPauta().getSessaoVotacao().getId() != null) {
-			throw new PautaConflictException("Já existe uma sessão de votação para a Pauta " + sessao.getPauta().getId());
+
+	@Autowired
+	private PautaRepository pautaRepository;
+
+	/**
+	 * Insere uma nova sessao de votacao e vincula a uma pauta especifica
+	 * @param sessao
+	 * @return a sessao de votacao criada
+	 * @throws Exception
+	 */
+	public SessaoVotacaoDadosDTO adicionarSessao(SessaoVotacaoDadosDTO sessao) throws Exception {
+		try {
+			SessaoVotacao sessaoCriada = null;
+			Optional<Pauta> pauta = pautaRepository.findById(sessao.idPauta());
+			if (!pauta.isPresent()) {
+				throw new PautaNotFoundException("A pauta informada não existe");
+			}
+			if (pauta.get().getSessaoVotacao() != null) {
+				sessaoCriada = pauta.get().getSessaoVotacao();
+				if (isSessaoVotacaoAberta(sessaoCriada.getId())) {
+					throw new PautaConflictException("Já existe uma sessão de votação para a Pauta " + sessaoCriada.getPauta().getId());
+				}
+			}
+			sessaoCriada = new SessaoVotacao();
+			sessaoCriada.setDuracaoEmMinutos(sessao.duracaoEmMinutos());
+			sessaoCriada.setPauta(pauta.get());
+			sessaoCriada = sessaoVotacaoRepository.save(sessaoCriada);
+			pauta.get().setSessaoVotacao(sessaoCriada);
+			pautaRepository.save(pauta.get());
+			return new SessaoVotacaoDadosDTO(sessaoCriada);
+		} catch (Exception ex) {
+			throw new PautaBadRequestException("Ocorreu um erro ao tentar abrir a sessão de votação: " + ex.getMessage());
 		}
-		return sessaoVotacaoRepository.save(sessao);
 	}
-	
-	public Boolean isSessaoVotacaoAberta(SessaoVotacao sessao) {
-		if (sessao.getPauta().getSessaoVotacao() != null) {
+
+	/**
+	 * Verifica se uma determinada sessao de votacao ainda esta aberta
+	 * @param idSessaoVotacao
+	 * @return Verdadeiro caso a sessao esteja aberta e falso caso contrario
+	 */
+	public Boolean isSessaoVotacaoAberta(Long idSessaoVotacao) {
+		SessaoVotacao sessao = sessaoVotacaoRepository.findById(idSessaoVotacao).orElseThrow(() -> new IllegalStateException(
+				new PautaNotFoundException("A sessão de votação " + idSessaoVotacao + " não foi encontrada")
+		));
+		if (sessao.getPauta() != null) {
 			Calendar agora = Calendar.getInstance();
 			Calendar duracaoSessao = Calendar.getInstance();
 			duracaoSessao.setTime(sessao.getPauta().getSessaoVotacao().getDataHoraCriacao());
@@ -43,13 +75,6 @@ public class SessaoVotacaoService {
 			return false;
 		}
 		return true;
-	}
-	
-	public Boolean podeVotar(String cpf) {
-		String uri = env.getProperty("userInfo.url") + "/" + StringUtils.removeCaracteresEspeciais(cpf);
-		RestTemplate rest = new RestTemplate();
-		UserStatusResponseRestApiDTO userInfo = rest.getForObject(uri, UserStatusResponseRestApiDTO.class);
-		return (userInfo.status().equalsIgnoreCase("ABLE_TO_VOTE") ? true : false) ;
 	}
 
 }

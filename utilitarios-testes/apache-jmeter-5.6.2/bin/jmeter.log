@@ -1,0 +1,915 @@
+2023-11-22 08:24:57,683 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2023-11-22 08:24:57,730 INFO o.a.j.JMeter: Loading user properties from: user.properties
+2023-11-22 08:24:57,732 INFO o.a.j.JMeter: Loading system properties from: system.properties
+2023-11-22 08:24:57,752 INFO o.a.j.JMeter: Copyright (c) 1998-2023 The Apache Software Foundation
+2023-11-22 08:24:57,752 INFO o.a.j.JMeter: Version 5.6.2
+2023-11-22 08:24:57,752 INFO o.a.j.JMeter: java.version=1.8.0_301
+2023-11-22 08:24:57,752 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2023-11-22 08:24:57,752 INFO o.a.j.JMeter: os.name=Windows 10
+2023-11-22 08:24:57,752 INFO o.a.j.JMeter: os.arch=amd64
+2023-11-22 08:24:57,752 INFO o.a.j.JMeter: os.version=10.0
+2023-11-22 08:24:57,752 INFO o.a.j.JMeter: file.encoding=Cp1252
+2023-11-22 08:24:57,758 INFO o.a.j.JMeter: java.awt.headless=null
+2023-11-22 08:24:57,758 INFO o.a.j.JMeter: Max memory     =1073741824
+2023-11-22 08:24:57,758 INFO o.a.j.JMeter: Available Processors =8
+2023-11-22 08:24:57,773 INFO o.a.j.JMeter: Default Locale=English (EN)
+2023-11-22 08:24:57,773 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2023-11-22 08:24:57,773 INFO o.a.j.JMeter: JMeterHome=C:\Users\roberth.corgosinho\Desktop\apache-jmeter-5.6.2
+2023-11-22 08:24:57,773 INFO o.a.j.JMeter: user.dir  =C:\Users\roberth.corgosinho\Desktop\apache-jmeter-5.6.2\bin
+2023-11-22 08:24:57,778 INFO o.a.j.JMeter: PWD       =C:\Users\roberth.corgosinho\Desktop\apache-jmeter-5.6.2\bin
+2023-11-22 08:24:57,783 INFO o.a.j.JMeter: IP: 192.168.1.76 Name: NADF287 FullName: NADF287.bancoob.br
+2023-11-22 08:24:57,868 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2023-11-22 08:24:58,504 INFO o.a.j.JMeterGuiLauncher: Setting LAF to: com.github.weisj.darklaf.DarkLaf:com.github.weisj.darklaf.theme.DarculaTheme
+2023-11-22 08:27:53,508 INFO o.a.j.s.FileServer: Default base='C:\Users\roberth.corgosinho\Desktop\apache-jmeter-5.6.2\bin'
+2023-11-22 08:27:53,508 INFO o.a.j.g.a.Load: Loading file: C:\Users\roberth.corgosinho\Desktop\TesteRoberth.jmx
+2023-11-22 08:27:53,516 INFO o.a.j.s.FileServer: Set new base='C:\Users\roberth.corgosinho\Desktop'
+2023-11-22 08:27:53,750 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2023-11-22 08:27:53,811 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2023-11-22 08:27:53,811 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2023-11-22 08:27:53,821 INFO o.a.j.s.SaveService: Loading file: C:\Users\roberth.corgosinho\Desktop\TesteRoberth.jmx
+2023-11-22 08:27:53,859 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-11-22 08:27:53,859 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-11-22 08:27:53,859 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-11-22 08:27:53,859 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-11-22 08:27:53,859 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2023-11-22 08:27:53,859 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2023-11-22 08:27:54,335 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2023-11-22 08:27:54,335 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2023-11-22 08:27:54,335 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2023-11-22 08:27:54,335 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2023-11-22 08:27:54,821 INFO o.a.j.s.FileServer: Set new base='C:\Users\roberth.corgosinho\Desktop'
+2023-11-22 08:35:29,549 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2023-11-22 08:35:29,550 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-11-22 08:35:29,551 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-11-22 08:35:29,553 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2023-11-22 08:35:29,554 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2023-11-22 08:35:29,872 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2023-11-22 08:35:29,907 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : TesteRoberth
+2023-11-22 08:35:29,907 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group TesteRoberth.
+2023-11-22 08:35:29,907 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2023-11-22 08:35:29,907 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
+2023-11-22 08:35:29,920 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2023-11-22 08:35:29,921 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2023-11-22 08:35:29,924 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-1
+2023-11-22 08:35:29,945 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = NADF287
+2023-11-22 08:35:29,956 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2023-11-22 08:35:42,355 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-1
+2023-11-22 08:35:42,355 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-1
+2023-11-22 08:35:42,358 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2023-11-22 08:35:42,359 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2023-11-22 08:38:14,917 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2023-11-22 08:38:14,917 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-11-22 08:38:14,921 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2023-11-22 08:38:15,049 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : TesteRoberth
+2023-11-22 08:38:15,049 INFO o.a.j.e.StandardJMeterEngine: Starting 10 threads for group TesteRoberth.
+2023-11-22 08:38:15,049 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2023-11-22 08:38:15,049 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=10 ramp-up=1 delayedStart=false
+2023-11-22 08:38:15,053 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-1
+2023-11-22 08:38:15,076 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2023-11-22 08:38:15,076 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2023-11-22 08:38:15,157 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-2
+2023-11-22 08:38:15,257 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-3
+2023-11-22 08:38:15,355 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-4
+2023-11-22 08:38:15,452 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-5
+2023-11-22 08:38:15,552 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-6
+2023-11-22 08:38:15,653 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-7
+2023-11-22 08:38:15,753 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-8
+2023-11-22 08:38:15,853 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-9
+2023-11-22 08:38:15,955 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-10
+2023-11-22 08:38:27,298 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-1
+2023-11-22 08:38:27,298 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-1
+2023-11-22 08:38:27,344 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-2
+2023-11-22 08:38:27,345 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-2
+2023-11-22 08:38:27,514 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-3
+2023-11-22 08:38:27,514 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-3
+2023-11-22 08:38:27,607 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-4
+2023-11-22 08:38:27,607 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-4
+2023-11-22 08:38:27,700 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-5
+2023-11-22 08:38:27,700 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-5
+2023-11-22 08:38:27,802 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-6
+2023-11-22 08:38:27,803 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-6
+2023-11-22 08:38:27,870 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-7
+2023-11-22 08:38:27,870 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-7
+2023-11-22 08:38:27,981 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-8
+2023-11-22 08:38:27,981 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-8
+2023-11-22 08:38:28,102 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-9
+2023-11-22 08:38:28,102 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-9
+2023-11-22 08:38:28,213 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-10
+2023-11-22 08:38:28,213 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-10
+2023-11-22 08:38:28,214 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2023-11-22 08:38:28,215 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2023-11-22 08:44:22,051 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2023-11-22 08:44:22,052 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-11-22 08:44:22,053 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2023-11-22 08:44:22,220 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : TesteRoberth
+2023-11-22 08:44:22,221 INFO o.a.j.e.StandardJMeterEngine: Starting 10 threads for group TesteRoberth.
+2023-11-22 08:44:22,221 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2023-11-22 08:44:22,221 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=10 ramp-up=1 delayedStart=false
+2023-11-22 08:44:22,229 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-1
+2023-11-22 08:44:22,249 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2023-11-22 08:44:22,250 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2023-11-22 08:44:22,339 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-2
+2023-11-22 08:44:22,438 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-3
+2023-11-22 08:44:22,568 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-4
+2023-11-22 08:44:22,665 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-5
+2023-11-22 08:44:22,728 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-6
+2023-11-22 08:44:22,828 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-7
+2023-11-22 08:44:22,972 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-8
+2023-11-22 08:44:23,082 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-9
+2023-11-22 08:44:23,128 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-10
+2023-11-22 08:44:23,890 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-3
+2023-11-22 08:44:23,891 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-3
+2023-11-22 08:44:23,893 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-9
+2023-11-22 08:44:23,893 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-9
+2023-11-22 08:44:23,895 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-8
+2023-11-22 08:44:23,896 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-8
+2023-11-22 08:44:23,898 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-7
+2023-11-22 08:44:23,898 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-7
+2023-11-22 08:44:23,899 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-1
+2023-11-22 08:44:23,900 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-1
+2023-11-22 08:44:23,904 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-4
+2023-11-22 08:44:23,905 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-4
+2023-11-22 08:44:23,911 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-6
+2023-11-22 08:44:23,911 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-6
+2023-11-22 08:44:23,920 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-5
+2023-11-22 08:44:23,920 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-2
+2023-11-22 08:44:23,920 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-5
+2023-11-22 08:44:23,920 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-2
+2023-11-22 08:44:23,928 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-10
+2023-11-22 08:44:23,928 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-10
+2023-11-22 08:44:23,929 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2023-11-22 08:44:23,929 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2023-11-22 08:57:02,485 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2023-11-22 08:57:02,485 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-11-22 08:57:02,487 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2023-11-22 08:57:02,619 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : TesteRoberth
+2023-11-22 08:57:02,619 INFO o.a.j.e.StandardJMeterEngine: Starting 10 threads for group TesteRoberth.
+2023-11-22 08:57:02,619 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2023-11-22 08:57:02,619 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=10 ramp-up=1 delayedStart=false
+2023-11-22 08:57:02,627 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-1
+2023-11-22 08:57:02,698 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2023-11-22 08:57:02,698 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2023-11-22 08:57:02,728 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-2
+2023-11-22 08:57:02,826 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-3
+2023-11-22 08:57:02,916 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-1
+2023-11-22 08:57:02,916 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-3
+2023-11-22 08:57:02,916 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-1
+2023-11-22 08:57:02,916 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-3
+2023-11-22 08:57:02,916 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-2
+2023-11-22 08:57:02,917 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-2
+2023-11-22 08:57:02,928 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-4
+2023-11-22 08:57:02,964 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-4
+2023-11-22 08:57:02,964 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-4
+2023-11-22 08:57:03,028 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-5
+2023-11-22 08:57:03,063 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-5
+2023-11-22 08:57:03,063 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-5
+2023-11-22 08:57:03,126 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-6
+2023-11-22 08:57:03,166 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-6
+2023-11-22 08:57:03,166 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-6
+2023-11-22 08:57:03,226 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-7
+2023-11-22 08:57:03,258 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-7
+2023-11-22 08:57:03,258 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-7
+2023-11-22 08:57:03,333 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-8
+2023-11-22 08:57:03,388 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-8
+2023-11-22 08:57:03,388 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-8
+2023-11-22 08:57:03,429 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-9
+2023-11-22 08:57:03,469 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-9
+2023-11-22 08:57:03,470 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-9
+2023-11-22 08:57:03,530 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-10
+2023-11-22 08:57:03,571 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-10
+2023-11-22 08:57:03,571 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-10
+2023-11-22 08:57:03,572 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2023-11-22 08:57:03,572 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2023-11-22 08:57:33,047 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2023-11-22 08:57:33,047 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-11-22 08:57:33,048 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2023-11-22 08:57:33,052 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : TesteRoberth
+2023-11-22 08:57:33,053 INFO o.a.j.e.StandardJMeterEngine: Starting 10 threads for group TesteRoberth.
+2023-11-22 08:57:33,054 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2023-11-22 08:57:33,054 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=10 ramp-up=1 delayedStart=false
+2023-11-22 08:57:33,060 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-1
+2023-11-22 08:57:33,108 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-1
+2023-11-22 08:57:33,108 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-1
+2023-11-22 08:57:33,123 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2023-11-22 08:57:33,123 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2023-11-22 08:57:33,162 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-2
+2023-11-22 08:57:33,194 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-2
+2023-11-22 08:57:33,195 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-2
+2023-11-22 08:57:33,263 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-3
+2023-11-22 08:57:33,304 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-3
+2023-11-22 08:57:33,304 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-3
+2023-11-22 08:57:33,362 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-4
+2023-11-22 08:57:33,396 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-4
+2023-11-22 08:57:33,396 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-4
+2023-11-22 08:57:33,466 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-5
+2023-11-22 08:57:33,506 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-5
+2023-11-22 08:57:33,507 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-5
+2023-11-22 08:57:33,563 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-6
+2023-11-22 08:57:33,597 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-6
+2023-11-22 08:57:33,597 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-6
+2023-11-22 08:57:33,663 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-7
+2023-11-22 08:57:33,697 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-7
+2023-11-22 08:57:33,697 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-7
+2023-11-22 08:57:33,762 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-8
+2023-11-22 08:57:33,796 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-8
+2023-11-22 08:57:33,796 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-8
+2023-11-22 08:57:33,860 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-9
+2023-11-22 08:57:33,894 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-9
+2023-11-22 08:57:33,894 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-9
+2023-11-22 08:57:33,961 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-10
+2023-11-22 08:57:33,990 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-10
+2023-11-22 08:57:33,990 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-10
+2023-11-22 08:57:33,991 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2023-11-22 08:57:33,991 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2023-11-22 09:02:31,386 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2023-11-22 09:02:31,387 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-11-22 09:02:31,388 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2023-11-22 09:02:31,497 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : TesteRoberth
+2023-11-22 09:02:31,497 INFO o.a.j.e.StandardJMeterEngine: Starting 10 threads for group TesteRoberth.
+2023-11-22 09:02:31,497 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2023-11-22 09:02:31,497 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=10 ramp-up=1 delayedStart=false
+2023-11-22 09:02:31,506 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-1
+2023-11-22 09:02:31,573 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-1
+2023-11-22 09:02:31,574 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-1
+2023-11-22 09:02:31,579 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2023-11-22 09:02:31,579 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2023-11-22 09:02:31,605 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-2
+2023-11-22 09:02:31,640 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-2
+2023-11-22 09:02:31,640 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-2
+2023-11-22 09:02:31,705 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-3
+2023-11-22 09:02:31,743 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-3
+2023-11-22 09:02:31,743 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-3
+2023-11-22 09:02:31,808 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-4
+2023-11-22 09:02:31,846 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-4
+2023-11-22 09:02:31,846 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-4
+2023-11-22 09:02:31,907 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-5
+2023-11-22 09:02:31,940 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-5
+2023-11-22 09:02:31,941 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-5
+2023-11-22 09:02:32,010 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-6
+2023-11-22 09:02:32,044 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-6
+2023-11-22 09:02:32,045 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-6
+2023-11-22 09:02:32,105 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-7
+2023-11-22 09:02:32,144 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-7
+2023-11-22 09:02:32,144 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-7
+2023-11-22 09:02:32,206 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-8
+2023-11-22 09:02:32,260 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-8
+2023-11-22 09:02:32,260 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-8
+2023-11-22 09:02:32,306 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-9
+2023-11-22 09:02:32,346 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-9
+2023-11-22 09:02:32,346 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-9
+2023-11-22 09:02:32,406 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-10
+2023-11-22 09:02:32,461 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-10
+2023-11-22 09:02:32,461 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-10
+2023-11-22 09:02:32,461 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2023-11-22 09:02:32,462 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2023-11-22 09:08:26,149 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2023-11-22 09:08:26,150 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-11-22 09:08:26,150 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2023-11-22 09:08:26,158 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : TesteRoberth
+2023-11-22 09:08:26,158 INFO o.a.j.e.StandardJMeterEngine: Starting 10 threads for group TesteRoberth.
+2023-11-22 09:08:26,158 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2023-11-22 09:08:26,158 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=10 ramp-up=1 delayedStart=false
+2023-11-22 09:08:26,164 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-1
+2023-11-22 09:08:26,227 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-1
+2023-11-22 09:08:26,228 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-1
+2023-11-22 09:08:26,241 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2023-11-22 09:08:26,241 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2023-11-22 09:08:26,266 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-2
+2023-11-22 09:08:26,321 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-2
+2023-11-22 09:08:26,321 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-2
+2023-11-22 09:08:26,366 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-3
+2023-11-22 09:08:26,405 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-3
+2023-11-22 09:08:26,405 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-3
+2023-11-22 09:08:26,467 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-4
+2023-11-22 09:08:26,505 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-4
+2023-11-22 09:08:26,505 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-4
+2023-11-22 09:08:26,565 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-5
+2023-11-22 09:08:26,595 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-5
+2023-11-22 09:08:26,595 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-5
+2023-11-22 09:08:26,669 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-6
+2023-11-22 09:08:26,700 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-6
+2023-11-22 09:08:26,701 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-6
+2023-11-22 09:08:26,767 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-7
+2023-11-22 09:08:26,799 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-7
+2023-11-22 09:08:26,799 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-7
+2023-11-22 09:08:26,869 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-8
+2023-11-22 09:08:26,900 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-8
+2023-11-22 09:08:26,900 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-8
+2023-11-22 09:08:26,972 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-9
+2023-11-22 09:08:27,005 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-9
+2023-11-22 09:08:27,005 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-9
+2023-11-22 09:08:27,072 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-10
+2023-11-22 09:08:27,102 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-10
+2023-11-22 09:08:27,102 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-10
+2023-11-22 09:08:27,102 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2023-11-22 09:08:27,102 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2023-11-22 09:11:24,237 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2023-11-22 09:11:24,238 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-11-22 09:11:24,238 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2023-11-22 09:11:24,339 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : TesteRoberth
+2023-11-22 09:11:24,339 INFO o.a.j.e.StandardJMeterEngine: Starting 10 threads for group TesteRoberth.
+2023-11-22 09:11:24,339 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2023-11-22 09:11:24,340 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=10 ramp-up=1 delayedStart=false
+2023-11-22 09:11:24,346 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-1
+2023-11-22 09:11:24,395 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-1
+2023-11-22 09:11:24,395 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-1
+2023-11-22 09:11:24,408 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2023-11-22 09:11:24,408 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2023-11-22 09:11:24,447 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-2
+2023-11-22 09:11:24,481 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-2
+2023-11-22 09:11:24,481 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-2
+2023-11-22 09:11:24,548 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-3
+2023-11-22 09:11:24,587 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-3
+2023-11-22 09:11:24,587 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-3
+2023-11-22 09:11:24,647 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-4
+2023-11-22 09:11:24,678 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-4
+2023-11-22 09:11:24,678 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-4
+2023-11-22 09:11:24,751 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-5
+2023-11-22 09:11:24,782 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-5
+2023-11-22 09:11:24,782 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-5
+2023-11-22 09:11:24,848 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-6
+2023-11-22 09:11:24,880 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-6
+2023-11-22 09:11:24,880 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-6
+2023-11-22 09:11:24,946 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-7
+2023-11-22 09:11:24,975 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-7
+2023-11-22 09:11:24,975 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-7
+2023-11-22 09:11:25,049 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-8
+2023-11-22 09:11:25,078 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-8
+2023-11-22 09:11:25,078 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-8
+2023-11-22 09:11:25,148 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-9
+2023-11-22 09:11:25,189 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-9
+2023-11-22 09:11:25,189 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-9
+2023-11-22 09:11:25,247 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-10
+2023-11-22 09:11:25,286 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-10
+2023-11-22 09:11:25,287 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-10
+2023-11-22 09:11:25,287 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2023-11-22 09:11:25,287 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2023-11-22 09:15:58,820 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2023-11-22 09:15:58,820 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-11-22 09:15:58,821 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2023-11-22 09:15:58,931 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : TesteRoberth
+2023-11-22 09:15:58,931 INFO o.a.j.e.StandardJMeterEngine: Starting 10 threads for group TesteRoberth.
+2023-11-22 09:15:58,931 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2023-11-22 09:15:58,931 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=10 ramp-up=1 delayedStart=false
+2023-11-22 09:15:58,937 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-1
+2023-11-22 09:15:58,983 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-1
+2023-11-22 09:15:58,983 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-1
+2023-11-22 09:15:58,996 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2023-11-22 09:15:58,996 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2023-11-22 09:15:59,037 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-2
+2023-11-22 09:15:59,075 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-2
+2023-11-22 09:15:59,075 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-2
+2023-11-22 09:15:59,142 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-3
+2023-11-22 09:15:59,184 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-3
+2023-11-22 09:15:59,184 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-3
+2023-11-22 09:15:59,238 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-4
+2023-11-22 09:15:59,274 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-4
+2023-11-22 09:15:59,274 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-4
+2023-11-22 09:15:59,340 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-5
+2023-11-22 09:15:59,383 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-5
+2023-11-22 09:15:59,384 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-5
+2023-11-22 09:15:59,438 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-6
+2023-11-22 09:15:59,468 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-6
+2023-11-22 09:15:59,468 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-6
+2023-11-22 09:15:59,538 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-7
+2023-11-22 09:15:59,577 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-7
+2023-11-22 09:15:59,577 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-7
+2023-11-22 09:15:59,640 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-8
+2023-11-22 09:15:59,675 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-8
+2023-11-22 09:15:59,676 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-8
+2023-11-22 09:15:59,737 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-9
+2023-11-22 09:15:59,775 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-9
+2023-11-22 09:15:59,775 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-9
+2023-11-22 09:15:59,838 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-10
+2023-11-22 09:15:59,881 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-10
+2023-11-22 09:15:59,881 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-10
+2023-11-22 09:15:59,882 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2023-11-22 09:15:59,882 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2023-11-22 09:21:11,465 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2023-11-22 09:21:11,465 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-11-22 09:21:11,467 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2023-11-22 09:21:11,588 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : TesteRoberth
+2023-11-22 09:21:11,588 INFO o.a.j.e.StandardJMeterEngine: Starting 10 threads for group TesteRoberth.
+2023-11-22 09:21:11,588 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2023-11-22 09:21:11,588 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=10 ramp-up=1 delayedStart=false
+2023-11-22 09:21:11,593 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-1
+2023-11-22 09:21:11,662 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2023-11-22 09:21:11,662 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2023-11-22 09:21:11,696 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-2
+2023-11-22 09:21:11,796 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-3
+2023-11-22 09:21:11,898 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-4
+2023-11-22 09:21:12,001 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-5
+2023-11-22 09:21:12,099 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-6
+2023-11-22 09:21:12,196 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-7
+2023-11-22 09:21:12,282 ERROR o.a.j.a.JSR223Assertion: Problem in JSR223 script: JSR223 Assertion
+javax.script.ScriptException: groovy.lang.MissingPropertyException: No such property: ResponseCode for class: Script1
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:320) ~[groovy-jsr223-3.0.17.jar:3.0.17]
+	at org.codehaus.groovy.jsr223.GroovyCompiledScript.eval(GroovyCompiledScript.java:71) ~[groovy-jsr223-3.0.17.jar:3.0.17]
+	at javax.script.CompiledScript.eval(Unknown Source) ~[?:1.8.0_301]
+	at org.apache.jmeter.util.JSR223TestElement.processFileOrScript(JSR223TestElement.java:230) ~[ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.assertions.JSR223Assertion.getResult(JSR223Assertion.java:50) [ApacheJMeter_components.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.processAssertion(JMeterThread.java:949) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.checkAssertions(JMeterThread.java:918) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:586) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:501) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:268) [ApacheJMeter_core.jar:5.6.2]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_301]
+Caused by: groovy.lang.MissingPropertyException: No such property: ResponseCode for class: Script1
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:65) ~[groovy-3.0.17.jar:3.0.17]
+	at org.codehaus.groovy.runtime.callsite.PogoGetPropertySite.getProperty(PogoGetPropertySite.java:51) ~[groovy-3.0.17.jar:3.0.17]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGroovyObjectGetProperty(AbstractCallSite.java:341) ~[groovy-3.0.17.jar:3.0.17]
+	at Script1.run(Script1.groovy:1) ~[?:?]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:317) ~[groovy-jsr223-3.0.17.jar:3.0.17]
+	... 10 more
+2023-11-22 09:21:12,293 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-5
+2023-11-22 09:21:12,294 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-5
+2023-11-22 09:21:12,282 ERROR o.a.j.a.JSR223Assertion: Problem in JSR223 script: JSR223 Assertion
+javax.script.ScriptException: groovy.lang.MissingPropertyException: No such property: ResponseCode for class: Script1
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:320) ~[groovy-jsr223-3.0.17.jar:3.0.17]
+	at org.codehaus.groovy.jsr223.GroovyCompiledScript.eval(GroovyCompiledScript.java:71) ~[groovy-jsr223-3.0.17.jar:3.0.17]
+	at javax.script.CompiledScript.eval(Unknown Source) ~[?:1.8.0_301]
+	at org.apache.jmeter.util.JSR223TestElement.processFileOrScript(JSR223TestElement.java:230) ~[ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.assertions.JSR223Assertion.getResult(JSR223Assertion.java:50) [ApacheJMeter_components.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.processAssertion(JMeterThread.java:949) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.checkAssertions(JMeterThread.java:918) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:586) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:501) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:268) [ApacheJMeter_core.jar:5.6.2]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_301]
+Caused by: groovy.lang.MissingPropertyException: No such property: ResponseCode for class: Script1
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:65) ~[groovy-3.0.17.jar:3.0.17]
+	at org.codehaus.groovy.runtime.callsite.PogoGetPropertySite.getProperty(PogoGetPropertySite.java:51) ~[groovy-3.0.17.jar:3.0.17]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGroovyObjectGetProperty(AbstractCallSite.java:341) ~[groovy-3.0.17.jar:3.0.17]
+	at Script1.run(Script1.groovy:1) ~[?:?]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:317) ~[groovy-jsr223-3.0.17.jar:3.0.17]
+	... 10 more
+2023-11-22 09:21:12,282 ERROR o.a.j.a.JSR223Assertion: Problem in JSR223 script: JSR223 Assertion
+javax.script.ScriptException: groovy.lang.MissingPropertyException: No such property: ResponseCode for class: Script1
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:320) ~[groovy-jsr223-3.0.17.jar:3.0.17]
+	at org.codehaus.groovy.jsr223.GroovyCompiledScript.eval(GroovyCompiledScript.java:71) ~[groovy-jsr223-3.0.17.jar:3.0.17]
+	at javax.script.CompiledScript.eval(Unknown Source) ~[?:1.8.0_301]
+	at org.apache.jmeter.util.JSR223TestElement.processFileOrScript(JSR223TestElement.java:230) ~[ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.assertions.JSR223Assertion.getResult(JSR223Assertion.java:50) [ApacheJMeter_components.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.processAssertion(JMeterThread.java:949) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.checkAssertions(JMeterThread.java:918) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:586) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:501) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:268) [ApacheJMeter_core.jar:5.6.2]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_301]
+Caused by: groovy.lang.MissingPropertyException: No such property: ResponseCode for class: Script1
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:65) ~[groovy-3.0.17.jar:3.0.17]
+	at org.codehaus.groovy.runtime.callsite.PogoGetPropertySite.getProperty(PogoGetPropertySite.java:51) ~[groovy-3.0.17.jar:3.0.17]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGroovyObjectGetProperty(AbstractCallSite.java:341) ~[groovy-3.0.17.jar:3.0.17]
+	at Script1.run(Script1.groovy:1) ~[?:?]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:317) ~[groovy-jsr223-3.0.17.jar:3.0.17]
+	... 10 more
+2023-11-22 09:21:12,282 ERROR o.a.j.a.JSR223Assertion: Problem in JSR223 script: JSR223 Assertion
+javax.script.ScriptException: groovy.lang.MissingPropertyException: No such property: ResponseCode for class: Script1
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:320) ~[groovy-jsr223-3.0.17.jar:3.0.17]
+	at org.codehaus.groovy.jsr223.GroovyCompiledScript.eval(GroovyCompiledScript.java:71) ~[groovy-jsr223-3.0.17.jar:3.0.17]
+	at javax.script.CompiledScript.eval(Unknown Source) ~[?:1.8.0_301]
+	at org.apache.jmeter.util.JSR223TestElement.processFileOrScript(JSR223TestElement.java:230) ~[ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.assertions.JSR223Assertion.getResult(JSR223Assertion.java:50) [ApacheJMeter_components.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.processAssertion(JMeterThread.java:949) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.checkAssertions(JMeterThread.java:918) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:586) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:501) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:268) [ApacheJMeter_core.jar:5.6.2]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_301]
+Caused by: groovy.lang.MissingPropertyException: No such property: ResponseCode for class: Script1
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:65) ~[groovy-3.0.17.jar:3.0.17]
+	at org.codehaus.groovy.runtime.callsite.PogoGetPropertySite.getProperty(PogoGetPropertySite.java:51) ~[groovy-3.0.17.jar:3.0.17]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGroovyObjectGetProperty(AbstractCallSite.java:341) ~[groovy-3.0.17.jar:3.0.17]
+	at Script1.run(Script1.groovy:1) ~[?:?]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:317) ~[groovy-jsr223-3.0.17.jar:3.0.17]
+	... 10 more
+2023-11-22 09:21:12,282 ERROR o.a.j.a.JSR223Assertion: Problem in JSR223 script: JSR223 Assertion
+javax.script.ScriptException: groovy.lang.MissingPropertyException: No such property: ResponseCode for class: Script1
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:320) ~[groovy-jsr223-3.0.17.jar:3.0.17]
+	at org.codehaus.groovy.jsr223.GroovyCompiledScript.eval(GroovyCompiledScript.java:71) ~[groovy-jsr223-3.0.17.jar:3.0.17]
+	at javax.script.CompiledScript.eval(Unknown Source) ~[?:1.8.0_301]
+	at org.apache.jmeter.util.JSR223TestElement.processFileOrScript(JSR223TestElement.java:230) ~[ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.assertions.JSR223Assertion.getResult(JSR223Assertion.java:50) [ApacheJMeter_components.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.processAssertion(JMeterThread.java:949) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.checkAssertions(JMeterThread.java:918) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:586) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:501) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:268) [ApacheJMeter_core.jar:5.6.2]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_301]
+Caused by: groovy.lang.MissingPropertyException: No such property: ResponseCode for class: Script1
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:65) ~[groovy-3.0.17.jar:3.0.17]
+	at org.codehaus.groovy.runtime.callsite.PogoGetPropertySite.getProperty(PogoGetPropertySite.java:51) ~[groovy-3.0.17.jar:3.0.17]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGroovyObjectGetProperty(AbstractCallSite.java:341) ~[groovy-3.0.17.jar:3.0.17]
+	at Script1.run(Script1.groovy:1) ~[?:?]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:317) ~[groovy-jsr223-3.0.17.jar:3.0.17]
+	... 10 more
+2023-11-22 09:21:12,282 ERROR o.a.j.a.JSR223Assertion: Problem in JSR223 script: JSR223 Assertion
+javax.script.ScriptException: groovy.lang.MissingPropertyException: No such property: ResponseCode for class: Script1
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:320) ~[groovy-jsr223-3.0.17.jar:3.0.17]
+	at org.codehaus.groovy.jsr223.GroovyCompiledScript.eval(GroovyCompiledScript.java:71) ~[groovy-jsr223-3.0.17.jar:3.0.17]
+	at javax.script.CompiledScript.eval(Unknown Source) ~[?:1.8.0_301]
+	at org.apache.jmeter.util.JSR223TestElement.processFileOrScript(JSR223TestElement.java:230) ~[ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.assertions.JSR223Assertion.getResult(JSR223Assertion.java:50) [ApacheJMeter_components.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.processAssertion(JMeterThread.java:949) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.checkAssertions(JMeterThread.java:918) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:586) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:501) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:268) [ApacheJMeter_core.jar:5.6.2]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_301]
+Caused by: groovy.lang.MissingPropertyException: No such property: ResponseCode for class: Script1
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:65) ~[groovy-3.0.17.jar:3.0.17]
+	at org.codehaus.groovy.runtime.callsite.PogoGetPropertySite.getProperty(PogoGetPropertySite.java:51) ~[groovy-3.0.17.jar:3.0.17]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGroovyObjectGetProperty(AbstractCallSite.java:341) ~[groovy-3.0.17.jar:3.0.17]
+	at Script1.run(Script1.groovy:1) ~[?:?]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:317) ~[groovy-jsr223-3.0.17.jar:3.0.17]
+	... 10 more
+2023-11-22 09:21:12,296 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-2
+2023-11-22 09:21:12,296 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-2
+2023-11-22 09:21:12,296 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-4
+2023-11-22 09:21:12,297 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-4
+2023-11-22 09:21:12,297 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-6
+2023-11-22 09:21:12,297 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-6
+2023-11-22 09:21:12,297 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-7
+2023-11-22 09:21:12,298 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-7
+2023-11-22 09:21:12,298 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-1
+2023-11-22 09:21:12,282 ERROR o.a.j.a.JSR223Assertion: Problem in JSR223 script: JSR223 Assertion
+javax.script.ScriptException: groovy.lang.MissingPropertyException: No such property: ResponseCode for class: Script1
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:320) ~[groovy-jsr223-3.0.17.jar:3.0.17]
+	at org.codehaus.groovy.jsr223.GroovyCompiledScript.eval(GroovyCompiledScript.java:71) ~[groovy-jsr223-3.0.17.jar:3.0.17]
+	at javax.script.CompiledScript.eval(Unknown Source) ~[?:1.8.0_301]
+	at org.apache.jmeter.util.JSR223TestElement.processFileOrScript(JSR223TestElement.java:230) ~[ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.assertions.JSR223Assertion.getResult(JSR223Assertion.java:50) [ApacheJMeter_components.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.processAssertion(JMeterThread.java:949) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.checkAssertions(JMeterThread.java:918) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:586) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:501) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:268) [ApacheJMeter_core.jar:5.6.2]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_301]
+Caused by: groovy.lang.MissingPropertyException: No such property: ResponseCode for class: Script1
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:65) ~[groovy-3.0.17.jar:3.0.17]
+	at org.codehaus.groovy.runtime.callsite.PogoGetPropertySite.getProperty(PogoGetPropertySite.java:51) ~[groovy-3.0.17.jar:3.0.17]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGroovyObjectGetProperty(AbstractCallSite.java:341) ~[groovy-3.0.17.jar:3.0.17]
+	at Script1.run(Script1.groovy:1) ~[?:?]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:317) ~[groovy-jsr223-3.0.17.jar:3.0.17]
+	... 10 more
+2023-11-22 09:21:12,299 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-8
+2023-11-22 09:21:12,299 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-1
+2023-11-22 09:21:12,300 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-3
+2023-11-22 09:21:12,300 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-3
+2023-11-22 09:21:12,337 ERROR o.a.j.a.JSR223Assertion: Problem in JSR223 script: JSR223 Assertion
+javax.script.ScriptException: groovy.lang.MissingPropertyException: No such property: ResponseCode for class: Script1
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:320) ~[groovy-jsr223-3.0.17.jar:3.0.17]
+	at org.codehaus.groovy.jsr223.GroovyCompiledScript.eval(GroovyCompiledScript.java:71) ~[groovy-jsr223-3.0.17.jar:3.0.17]
+	at javax.script.CompiledScript.eval(Unknown Source) ~[?:1.8.0_301]
+	at org.apache.jmeter.util.JSR223TestElement.processFileOrScript(JSR223TestElement.java:230) ~[ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.assertions.JSR223Assertion.getResult(JSR223Assertion.java:50) [ApacheJMeter_components.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.processAssertion(JMeterThread.java:949) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.checkAssertions(JMeterThread.java:918) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:586) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:501) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:268) [ApacheJMeter_core.jar:5.6.2]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_301]
+Caused by: groovy.lang.MissingPropertyException: No such property: ResponseCode for class: Script1
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:65) ~[groovy-3.0.17.jar:3.0.17]
+	at org.codehaus.groovy.runtime.callsite.PogoGetPropertySite.getProperty(PogoGetPropertySite.java:51) ~[groovy-3.0.17.jar:3.0.17]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGroovyObjectGetProperty(AbstractCallSite.java:341) ~[groovy-3.0.17.jar:3.0.17]
+	at Script1.run(Script1.groovy:1) ~[?:?]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:317) ~[groovy-jsr223-3.0.17.jar:3.0.17]
+	... 10 more
+2023-11-22 09:21:12,338 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-8
+2023-11-22 09:21:12,338 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-8
+2023-11-22 09:21:12,404 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-9
+2023-11-22 09:21:12,435 ERROR o.a.j.a.JSR223Assertion: Problem in JSR223 script: JSR223 Assertion
+javax.script.ScriptException: groovy.lang.MissingPropertyException: No such property: ResponseCode for class: Script1
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:320) ~[groovy-jsr223-3.0.17.jar:3.0.17]
+	at org.codehaus.groovy.jsr223.GroovyCompiledScript.eval(GroovyCompiledScript.java:71) ~[groovy-jsr223-3.0.17.jar:3.0.17]
+	at javax.script.CompiledScript.eval(Unknown Source) ~[?:1.8.0_301]
+	at org.apache.jmeter.util.JSR223TestElement.processFileOrScript(JSR223TestElement.java:230) ~[ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.assertions.JSR223Assertion.getResult(JSR223Assertion.java:50) [ApacheJMeter_components.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.processAssertion(JMeterThread.java:949) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.checkAssertions(JMeterThread.java:918) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:586) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:501) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:268) [ApacheJMeter_core.jar:5.6.2]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_301]
+Caused by: groovy.lang.MissingPropertyException: No such property: ResponseCode for class: Script1
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:65) ~[groovy-3.0.17.jar:3.0.17]
+	at org.codehaus.groovy.runtime.callsite.PogoGetPropertySite.getProperty(PogoGetPropertySite.java:51) ~[groovy-3.0.17.jar:3.0.17]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGroovyObjectGetProperty(AbstractCallSite.java:341) ~[groovy-3.0.17.jar:3.0.17]
+	at Script1.run(Script1.groovy:1) ~[?:?]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:317) ~[groovy-jsr223-3.0.17.jar:3.0.17]
+	... 10 more
+2023-11-22 09:21:12,436 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-9
+2023-11-22 09:21:12,436 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-9
+2023-11-22 09:21:12,499 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-10
+2023-11-22 09:21:12,529 ERROR o.a.j.a.JSR223Assertion: Problem in JSR223 script: JSR223 Assertion
+javax.script.ScriptException: groovy.lang.MissingPropertyException: No such property: ResponseCode for class: Script1
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:320) ~[groovy-jsr223-3.0.17.jar:3.0.17]
+	at org.codehaus.groovy.jsr223.GroovyCompiledScript.eval(GroovyCompiledScript.java:71) ~[groovy-jsr223-3.0.17.jar:3.0.17]
+	at javax.script.CompiledScript.eval(Unknown Source) ~[?:1.8.0_301]
+	at org.apache.jmeter.util.JSR223TestElement.processFileOrScript(JSR223TestElement.java:230) ~[ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.assertions.JSR223Assertion.getResult(JSR223Assertion.java:50) [ApacheJMeter_components.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.processAssertion(JMeterThread.java:949) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.checkAssertions(JMeterThread.java:918) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:586) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:501) [ApacheJMeter_core.jar:5.6.2]
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:268) [ApacheJMeter_core.jar:5.6.2]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_301]
+Caused by: groovy.lang.MissingPropertyException: No such property: ResponseCode for class: Script1
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:65) ~[groovy-3.0.17.jar:3.0.17]
+	at org.codehaus.groovy.runtime.callsite.PogoGetPropertySite.getProperty(PogoGetPropertySite.java:51) ~[groovy-3.0.17.jar:3.0.17]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGroovyObjectGetProperty(AbstractCallSite.java:341) ~[groovy-3.0.17.jar:3.0.17]
+	at Script1.run(Script1.groovy:1) ~[?:?]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:317) ~[groovy-jsr223-3.0.17.jar:3.0.17]
+	... 10 more
+2023-11-22 09:21:12,531 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-10
+2023-11-22 09:21:12,531 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-10
+2023-11-22 09:21:12,532 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2023-11-22 09:21:12,536 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2023-11-22 09:23:31,103 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2023-11-22 09:23:31,103 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-11-22 09:23:31,104 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2023-11-22 09:23:31,256 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : TesteRoberth
+2023-11-22 09:23:31,256 INFO o.a.j.e.StandardJMeterEngine: Starting 10 threads for group TesteRoberth.
+2023-11-22 09:23:31,256 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2023-11-22 09:23:31,256 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=10 ramp-up=1 delayedStart=false
+2023-11-22 09:23:31,262 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-1
+2023-11-22 09:23:31,351 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2023-11-22 09:23:31,351 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2023-11-22 09:23:31,368 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-2
+2023-11-22 09:23:31,430 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-1
+2023-11-22 09:23:31,430 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-1
+2023-11-22 09:23:31,443 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-2
+2023-11-22 09:23:31,443 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-2
+2023-11-22 09:23:31,470 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-3
+2023-11-22 09:23:31,528 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-3
+2023-11-22 09:23:31,529 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-3
+2023-11-22 09:23:31,571 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-4
+2023-11-22 09:23:31,607 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-4
+2023-11-22 09:23:31,607 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-4
+2023-11-22 09:23:31,666 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-5
+2023-11-22 09:23:31,714 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-5
+2023-11-22 09:23:31,714 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-5
+2023-11-22 09:23:31,769 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-6
+2023-11-22 09:23:31,815 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-6
+2023-11-22 09:23:31,815 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-6
+2023-11-22 09:23:31,867 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-7
+2023-11-22 09:23:31,894 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-7
+2023-11-22 09:23:31,894 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-7
+2023-11-22 09:23:31,969 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-8
+2023-11-22 09:23:31,995 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-8
+2023-11-22 09:23:31,995 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-8
+2023-11-22 09:23:32,070 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-9
+2023-11-22 09:23:32,097 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-9
+2023-11-22 09:23:32,098 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-9
+2023-11-22 09:23:32,168 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-10
+2023-11-22 09:23:32,196 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-10
+2023-11-22 09:23:32,196 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-10
+2023-11-22 09:23:32,197 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2023-11-22 09:23:32,198 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2023-11-22 09:25:04,372 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2023-11-22 09:25:04,372 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-11-22 09:25:04,373 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2023-11-22 09:25:04,479 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : TesteRoberth
+2023-11-22 09:25:04,479 INFO o.a.j.e.StandardJMeterEngine: Starting 10 threads for group TesteRoberth.
+2023-11-22 09:25:04,479 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2023-11-22 09:25:04,479 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=10 ramp-up=1 delayedStart=false
+2023-11-22 09:25:04,484 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-1
+2023-11-22 09:25:04,547 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2023-11-22 09:25:04,547 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2023-11-22 09:25:04,549 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-1
+2023-11-22 09:25:04,549 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-1
+2023-11-22 09:25:04,586 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-2
+2023-11-22 09:25:04,613 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-2
+2023-11-22 09:25:04,613 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-2
+2023-11-22 09:25:04,688 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-3
+2023-11-22 09:25:04,721 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-3
+2023-11-22 09:25:04,721 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-3
+2023-11-22 09:25:04,789 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-4
+2023-11-22 09:25:04,814 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-4
+2023-11-22 09:25:04,814 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-4
+2023-11-22 09:25:04,892 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-5
+2023-11-22 09:25:04,917 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-5
+2023-11-22 09:25:04,918 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-5
+2023-11-22 09:25:04,988 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-6
+2023-11-22 09:25:05,017 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-6
+2023-11-22 09:25:05,018 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-6
+2023-11-22 09:25:05,087 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-7
+2023-11-22 09:25:05,112 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-7
+2023-11-22 09:25:05,112 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-7
+2023-11-22 09:25:05,189 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-8
+2023-11-22 09:25:05,216 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-8
+2023-11-22 09:25:05,216 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-8
+2023-11-22 09:25:05,289 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-9
+2023-11-22 09:25:05,318 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-9
+2023-11-22 09:25:05,318 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-9
+2023-11-22 09:25:05,389 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-10
+2023-11-22 09:25:05,416 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-10
+2023-11-22 09:25:05,416 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-10
+2023-11-22 09:25:05,416 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2023-11-22 09:25:05,417 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2023-11-22 09:25:28,546 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2023-11-22 09:25:28,546 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-11-22 09:25:28,547 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2023-11-22 09:25:28,648 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : TesteRoberth
+2023-11-22 09:25:28,648 INFO o.a.j.e.StandardJMeterEngine: Starting 10 threads for group TesteRoberth.
+2023-11-22 09:25:28,648 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2023-11-22 09:25:28,648 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=10 ramp-up=1 delayedStart=false
+2023-11-22 09:25:28,654 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-1
+2023-11-22 09:25:28,699 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-1
+2023-11-22 09:25:28,700 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-1
+2023-11-22 09:25:28,716 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2023-11-22 09:25:28,716 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2023-11-22 09:25:28,756 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-2
+2023-11-22 09:25:28,784 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-2
+2023-11-22 09:25:28,784 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-2
+2023-11-22 09:25:28,857 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-3
+2023-11-22 09:25:28,885 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-3
+2023-11-22 09:25:28,885 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-3
+2023-11-22 09:25:28,957 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-4
+2023-11-22 09:25:28,981 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-4
+2023-11-22 09:25:28,981 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-4
+2023-11-22 09:25:29,058 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-5
+2023-11-22 09:25:29,084 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-5
+2023-11-22 09:25:29,084 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-5
+2023-11-22 09:25:29,155 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-6
+2023-11-22 09:25:29,177 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-6
+2023-11-22 09:25:29,177 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-6
+2023-11-22 09:25:29,255 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-7
+2023-11-22 09:25:29,279 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-7
+2023-11-22 09:25:29,279 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-7
+2023-11-22 09:25:29,355 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-8
+2023-11-22 09:25:29,380 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-8
+2023-11-22 09:25:29,380 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-8
+2023-11-22 09:25:29,453 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-9
+2023-11-22 09:25:29,480 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-9
+2023-11-22 09:25:29,480 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-9
+2023-11-22 09:25:29,554 INFO o.a.j.t.JMeterThread: Thread started: TesteRoberth 1-10
+2023-11-22 09:25:29,582 INFO o.a.j.t.JMeterThread: Thread is done: TesteRoberth 1-10
+2023-11-22 09:25:29,582 INFO o.a.j.t.JMeterThread: Thread finished: TesteRoberth 1-10
+2023-11-22 09:25:29,582 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2023-11-22 09:25:29,582 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2023-11-22 11:05:41,265 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2023-11-22 11:05:41,273 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-11-22 11:05:41,279 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2023-11-22 11:05:41,843 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : TestePerformanceAPIRestDBServer
+2023-11-22 11:05:41,843 INFO o.a.j.e.StandardJMeterEngine: Starting 10 threads for group TestePerformanceAPIRestDBServer.
+2023-11-22 11:05:41,843 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2023-11-22 11:05:41,843 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=10 ramp-up=1 delayedStart=false
+2023-11-22 11:05:41,857 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-1
+2023-11-22 11:05:41,952 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2023-11-22 11:05:41,952 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2023-11-22 11:05:41,959 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-2
+2023-11-22 11:05:42,055 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-3
+2023-11-22 11:05:42,155 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-4
+2023-11-22 11:05:42,256 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-5
+2023-11-22 11:05:42,351 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-6
+2023-11-22 11:05:42,454 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-7
+2023-11-22 11:05:42,552 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-8
+2023-11-22 11:05:42,656 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-9
+2023-11-22 11:05:42,755 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-10
+2023-11-22 11:05:43,125 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-1
+2023-11-22 11:05:43,125 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-7
+2023-11-22 11:05:43,125 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-6
+2023-11-22 11:05:43,125 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-8
+2023-11-22 11:05:43,125 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-9
+2023-11-22 11:05:43,125 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-9
+2023-11-22 11:05:43,125 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-10
+2023-11-22 11:05:43,125 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-10
+2023-11-22 11:05:43,125 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-2
+2023-11-22 11:05:43,125 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-4
+2023-11-22 11:05:43,125 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-3
+2023-11-22 11:05:43,125 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-8
+2023-11-22 11:05:43,125 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-1
+2023-11-22 11:05:43,126 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-3
+2023-11-22 11:05:43,126 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-4
+2023-11-22 11:05:43,126 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-7
+2023-11-22 11:05:43,126 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-6
+2023-11-22 11:05:43,127 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-2
+2023-11-22 11:05:43,129 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-5
+2023-11-22 11:05:43,130 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-5
+2023-11-22 11:05:43,131 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2023-11-22 11:05:43,132 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2023-11-22 11:06:23,935 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2023-11-22 11:06:23,935 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-11-22 11:06:23,936 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2023-11-22 11:06:24,064 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : TestePerformanceAPIRestDBServer
+2023-11-22 11:06:24,065 INFO o.a.j.e.StandardJMeterEngine: Starting 10 threads for group TestePerformanceAPIRestDBServer.
+2023-11-22 11:06:24,065 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2023-11-22 11:06:24,065 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=10 ramp-up=1 delayedStart=false
+2023-11-22 11:06:24,072 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-1
+2023-11-22 11:06:24,138 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-1
+2023-11-22 11:06:24,138 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-1
+2023-11-22 11:06:24,142 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2023-11-22 11:06:24,142 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2023-11-22 11:06:24,173 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-2
+2023-11-22 11:06:24,211 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-2
+2023-11-22 11:06:24,211 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-2
+2023-11-22 11:06:24,275 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-3
+2023-11-22 11:06:24,319 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-3
+2023-11-22 11:06:24,319 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-3
+2023-11-22 11:06:24,377 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-4
+2023-11-22 11:06:24,413 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-4
+2023-11-22 11:06:24,413 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-4
+2023-11-22 11:06:24,475 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-5
+2023-11-22 11:06:24,508 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-5
+2023-11-22 11:06:24,508 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-5
+2023-11-22 11:06:24,574 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-6
+2023-11-22 11:06:24,622 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-6
+2023-11-22 11:06:24,622 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-6
+2023-11-22 11:06:24,672 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-7
+2023-11-22 11:06:24,711 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-7
+2023-11-22 11:06:24,711 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-7
+2023-11-22 11:06:24,772 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-8
+2023-11-22 11:06:24,809 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-8
+2023-11-22 11:06:24,809 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-8
+2023-11-22 11:06:24,873 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-9
+2023-11-22 11:06:24,912 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-9
+2023-11-22 11:06:24,912 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-9
+2023-11-22 11:06:24,974 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-10
+2023-11-22 11:06:25,006 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-10
+2023-11-22 11:06:25,006 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-10
+2023-11-22 11:06:25,006 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2023-11-22 11:06:25,007 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2023-11-22 11:06:54,894 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2023-11-22 11:06:54,895 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-11-22 11:06:54,895 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2023-11-22 11:06:55,000 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : TestePerformanceAPIRestDBServer
+2023-11-22 11:06:55,000 INFO o.a.j.e.StandardJMeterEngine: Starting 10 threads for group TestePerformanceAPIRestDBServer.
+2023-11-22 11:06:55,000 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2023-11-22 11:06:55,000 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=10 ramp-up=1 delayedStart=false
+2023-11-22 11:06:55,005 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-1
+2023-11-22 11:06:55,068 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2023-11-22 11:06:55,068 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2023-11-22 11:06:55,076 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-1
+2023-11-22 11:06:55,076 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-1
+2023-11-22 11:06:55,105 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-2
+2023-11-22 11:06:55,147 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-2
+2023-11-22 11:06:55,147 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-2
+2023-11-22 11:06:55,207 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-3
+2023-11-22 11:06:55,261 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-3
+2023-11-22 11:06:55,261 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-3
+2023-11-22 11:06:55,309 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-4
+2023-11-22 11:06:55,352 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-4
+2023-11-22 11:06:55,353 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-4
+2023-11-22 11:06:55,409 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-5
+2023-11-22 11:06:55,448 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-5
+2023-11-22 11:06:55,448 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-5
+2023-11-22 11:06:55,506 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-6
+2023-11-22 11:06:55,551 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-6
+2023-11-22 11:06:55,551 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-6
+2023-11-22 11:06:55,610 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-7
+2023-11-22 11:06:55,668 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-7
+2023-11-22 11:06:55,668 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-7
+2023-11-22 11:06:55,708 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-8
+2023-11-22 11:06:55,753 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-8
+2023-11-22 11:06:55,753 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-8
+2023-11-22 11:06:55,807 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-9
+2023-11-22 11:06:55,853 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-9
+2023-11-22 11:06:55,853 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-9
+2023-11-22 11:06:55,907 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-10
+2023-11-22 11:06:55,941 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-10
+2023-11-22 11:06:55,941 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-10
+2023-11-22 11:06:55,942 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2023-11-22 11:06:55,942 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2023-11-22 11:13:50,843 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2023-11-22 11:13:50,843 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-11-22 11:13:50,844 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2023-11-22 11:13:50,954 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : TestePerformanceAPIRestDBServer
+2023-11-22 11:13:50,954 INFO o.a.j.e.StandardJMeterEngine: Starting 10 threads for group TestePerformanceAPIRestDBServer.
+2023-11-22 11:13:50,954 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2023-11-22 11:13:50,954 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=10 ramp-up=1 delayedStart=false
+2023-11-22 11:13:50,962 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-1
+2023-11-22 11:13:51,040 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2023-11-22 11:13:51,040 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2023-11-22 11:13:51,059 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-1
+2023-11-22 11:13:51,060 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-1
+2023-11-22 11:13:51,063 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-2
+2023-11-22 11:13:51,121 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-2
+2023-11-22 11:13:51,121 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-2
+2023-11-22 11:13:51,168 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-3
+2023-11-22 11:13:51,211 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-3
+2023-11-22 11:13:51,211 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-3
+2023-11-22 11:13:51,265 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-4
+2023-11-22 11:13:51,302 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-4
+2023-11-22 11:13:51,303 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-4
+2023-11-22 11:13:51,365 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-5
+2023-11-22 11:13:51,423 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-5
+2023-11-22 11:13:51,423 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-5
+2023-11-22 11:13:51,462 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-6
+2023-11-22 11:13:51,501 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-6
+2023-11-22 11:13:51,501 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-6
+2023-11-22 11:13:51,562 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-7
+2023-11-22 11:13:51,601 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-7
+2023-11-22 11:13:51,601 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-7
+2023-11-22 11:13:51,660 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-8
+2023-11-22 11:13:51,694 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-8
+2023-11-22 11:13:51,694 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-8
+2023-11-22 11:13:51,763 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-9
+2023-11-22 11:13:51,797 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-9
+2023-11-22 11:13:51,797 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-9
+2023-11-22 11:13:51,863 INFO o.a.j.t.JMeterThread: Thread started: TestePerformanceAPIRestDBServer 1-10
+2023-11-22 11:13:51,913 INFO o.a.j.t.JMeterThread: Thread is done: TestePerformanceAPIRestDBServer 1-10
+2023-11-22 11:13:51,913 INFO o.a.j.t.JMeterThread: Thread finished: TestePerformanceAPIRestDBServer 1-10
+2023-11-22 11:13:51,913 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2023-11-22 11:13:51,914 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)

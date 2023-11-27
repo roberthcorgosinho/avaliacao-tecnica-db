@@ -1,5 +1,13 @@
 package br.com.roberth.avaliacaoTecnica.model.dto;
 
-public record ResultadoVotacaoDTO (String assuntoPauta, Long totalVotos, Long totalSim, Long totalNao) {
+import com.fasterxml.jackson.annotation.JsonInclude;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public record ResultadoVotacaoDTO(
+        Long idPauta,
+        String assuntoPauta,
+        Long totalVotos,
+        Long totalVotosSim,
+        Long totalVotosNao
+) {
 }

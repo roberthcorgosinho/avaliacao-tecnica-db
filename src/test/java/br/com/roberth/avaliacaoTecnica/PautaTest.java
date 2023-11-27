@@ -18,18 +18,20 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 
-import br.com.roberth.avaliacaoTecnica.model.dto.ResultadoVotacaoDTO;
 import br.com.roberth.avaliacaoTecnica.model.entidades.Pauta;
 import br.com.roberth.avaliacaoTecnica.model.entidades.SessaoVotacao;
 import br.com.roberth.avaliacaoTecnica.model.entidades.Voto;
-import br.com.roberth.avaliacaoTecnica.model.entidades.VotoId;
 import br.com.roberth.avaliacaoTecnica.repository.PautaRepository;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @AutoConfigureMockMvc
+@ActiveProfiles("test")
+//@DataJpaTest
+//@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public class PautaTest {
 	
 	@Autowired

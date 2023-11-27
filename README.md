@@ -40,6 +40,8 @@ Lembre de deixar todas as orientações necessárias para executar o seu código
     - Caso o CPF seja inválido, a API retornará o HTTP Status 404 (Not found). Você pode usar geradores de CPF para gerar CPFs válidos
     - Caso o CPF seja válido, a API retornará se o usuário pode (ABLE_TO_VOTE) ou não pode (UNABLE_TO_VOTE) executar a operação. Essa operação retorna resultados aleatórios, portanto um mesmo CPF pode funcionar em um teste e não funcionar no outro.
 
+Exemplos de retorno do serviço: 
+
 ```
 // CPF Ok para votar
 {
@@ -50,10 +52,6 @@ Lembre de deixar todas as orientações necessárias para executar o seu código
     "status": "UNABLE_TO_VOTE
 }
 ```
-
-- Implementado e disponibilizado em https://github.com/roberthcorgosinho/userInfo
-
-Exemplos de retorno do serviço
 
 #### Tarefa Bônus 2 - Performance
 
@@ -116,7 +114,7 @@ POST http://seudominio.com/ACAO1
     “campo1”: “valor1”,
     “campo2”: 123,
     “idCampoTexto”: “Texto”,
-    “idCampoNumerico: 999
+    “idCampoNumerico": 999
     “idCampoData”: “01/01/2000”
 }
 ```
@@ -129,10 +127,64 @@ A tela do tipo SELECAO exibe uma lista de opções para que o usuário.
 
 O aplicativo envia uma requisição POST para a url informada e com o body definido pelo objeto dentro de cada item da lista de seleção, quando o mesmo é acionado, semelhando ao funcionamento dos botões da tela FORMULARIO.
 
+---
+
 # Considerações do candidato
 
-Gostaria de ter feito um trabalho melhor, no entanto, fazendo este teste e trabalhando simultâneamente
-não tive tempo hábil para fazer algo mais adequado, mais performático e com melhores práticas 
-tanto de codificação quanto de documentação.
+Gostaria de ter feito um trabalho melhor, no entanto, fazendo este teste e trabalhando simultâneamente não tive tempo hábil para fazer algo mais adequado, mais performático e com melhores práticas tanto de codificação quanto de documentação.
 
-- No arquivo DBServer.postman_collection.json existem as chamadas dos endpoints para testes
+Com relação ao Anexo 1, foi-me informado que não haveria necessidade de implementação ou de se realizar qualquer outra ação a respeito.
+
+No enunciado do problema, na descrição do objetivo, cita que a implementação deve ser uma **API REST**:
+
+```
+### Objetivo
+
+No cooperativismo, cada associado possui um voto e as decisões são tomadas em assembleias, por votação. Imagine que você deve criar uma solução para dispositivos móveis para gerenciar e participar dessas sessões de votação.
+Essa solução deve ser executada na nuvem e promover as seguintes funcionalidades através de uma API REST...
+```
+
+Logo, foi seguido o padrão **REST** e não o **RESTFUL** como "cobrado" na seguinte mensagem que me foi enviada:
+
+```
+...
+- Padrão RESTFUL não foi seguido, no mesmo Controller temos ações de Pauta, Sessão e Votação junto, isso dificulta a manutenabilidade futura;
+...
+```
+
+No entanto, ajustes foram feitos para se tentar adequar as normas e princípios para se considerar API dentro do padrão RESTFUL (arquitetura cliente-servidor, comunicação stateless, designe que possibilita o uso de cache, interface uniforme, sistema de camadas).
+
+## Tarefas bônus:
+
+### Tarefa Bônus 1 - Integração com sistemas externos
+
+- Implementado e disponibilizado em https://github.com/roberthcorgosinho/userInfo
+
+### Tarefa Bônus 2 - Performance
+
+- Foi disponibilizado um arquivo junto ao projeto (ver abaixo) com um plano de teste de performance
+
+### Tarefa Bônus 3 - Versionamento da API
+
+- Este código está versionado utilizando-se o GITHUB
+- Foi criado um documento OPENAPI (Swagger) para documentação da API Criada
+
+Foi feita a seguinte pergunta: ```Como você versionaria a API da sua aplicação? Que estratégia usar?```
+
+Minha resposta: versionamento através de algum sistema de versionamento (GIT, SVN, etc.), uso da OPENAPI (Swagger) para documentação da API, uso do JAVADOC para documentação direta no código-fonte da aplicação, implementação de testes unitários e testes de integração automatizados para garantir a corretude do código, uso de ferramentas como SONAR para garantir uma maior qualidade do código-fonte e uso de ferramentas de integração contínua como o JENKINS. Já para projetos em estágio inicial, minha recomendação é a utilização também do Flyway para versionamento das modificações a serem realizadas no banco de dados da aplicação
+
+#### SWAGGER DA MINHA APLICAÇÃO
+
+- Para acessar a documentação OPENAPI (Swagger) da minha aplicação, entre no seguinte endereço:
+
+http://localhost:8080/swagger-ui/index.html
+
+http://localhost:8080/v3/api-docs
+
+http://localhost:8080/api-docs.yaml (arquivo yaml)
+
+## Arquivos disponibilizados junto ao projeto
+
+- No arquivo ```/utilitarios-testes/DBServer.postman_collection.json``` existem as chamadas dos endpoints para testes
+- No arquivo ```/utilitarios-testes/TestePerformanceDBRoberthJMETER.jmx``` existe o plano de testes de performance criado utilizando-se o aplicativo JMETER da Apache (disponilizado junto ao código)
+- Na pasta ```/utilitarios-testes/apache-jmeter-5.6.2``` está disponibilizado o aplicativo JMETER para a execução do plano de teste de performance.

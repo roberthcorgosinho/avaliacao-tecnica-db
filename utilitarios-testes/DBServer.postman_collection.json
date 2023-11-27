@@ -1,0 +1,308 @@
+{
+	"info": {
+		"_postman_id": "92f06d0b-9a74-40a0-acd3-3a4cd8cbad81",
+		"name": "DBServer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17941047"
+	},
+	"item": [
+		{
+			"name": "Gerar Usuários",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.unset(\"cpfGerado\");"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"pm.collectionVariables.set(\"cpfGerado\", jsonData[0].cpf);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "cpfGerado",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8181/users/gerar/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"users",
+						"gerar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pautas: Criar pauta",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.unset(\"idPautaCriada\");"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"pm.collectionVariables.set(\"idPautaCriada\", jsonData.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"assunto\": \"Teste de criação de pauta\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/pautas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pautas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pautas: Obter por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/pautas/{{idPautaCriada}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pautas",
+						"{{idPautaCriada}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pautas: Abrir sessão de votação",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idPauta\": {{idPautaCriada}},\r\n    \"duracaoEmMinutos\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/sessoes-votacao",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sessoes-votacao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pautas: votar em sessão aberta",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"function getRandomNumber(min, max) {\r",
+							"    const minNumber = Math.ceil(min);\r",
+							"    const maxNumber = Math.floor(max);\r",
+							"\r",
+							"    return Math.floor(\r",
+							"      Math.random() * (maxNumber - minNumber + 1)\r",
+							"    ) + minNumber;\r",
+							"}\r",
+							"\r",
+							"function randomOpcaoVotacao() {\r",
+							"        let opcoes = [\"SIM\", \"NAO\", \"123\"];        \r",
+							"        let indice = getRandomNumber(0, 2);       \r",
+							"        return opcoes[indice];\r",
+							"}\r",
+							"\r",
+							"pm.collectionVariables.set(\"opcaoVotacao\", randomOpcaoVotacao());"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cpf\": \"{{cpfGerado}}\",\r\n    \"idPauta\": {{idPautaCriada}},\r\n    \"opcao\": \"{{opcaoVotacao}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/votos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"votos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pautas: Resultado votação",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/pautas/totalizar-votos/{{idPautaCriada}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pautas",
+						"totalizar-votos",
+						"{{idPautaCriada}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pautas: Criar pautas em Lote",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"assunto\": \"Teste de criação de pauta 1\"\r\n    },\r\n    {\r\n        \"assunto\": \"Teste de criação de pauta 2\"\r\n    },\r\n    {\r\n        \"assunto\": \"Teste de criação de pauta 3\"\r\n    },\r\n    {\r\n        \"assunto\": \"Teste de criação de pauta 4\"\r\n    },\r\n    {\r\n        \"assunto\": \"Teste de criação de pauta 5\"\r\n    },\r\n    {\r\n        \"assunto\": \"Teste de criação de pauta 6\"\r\n    },\r\n    {\r\n        \"assunto\": \"Teste de criação de pauta 7\"\r\n    },\r\n    {\r\n        \"assunto\": \"Teste de criação de pauta 8\"\r\n    },\r\n    {\r\n        \"assunto\": \"Teste de criação de pauta 9\"\r\n    },\r\n    {\r\n        \"assunto\": \"Teste de criação de pauta 10\"\r\n    },\r\n    {\r\n        \"assunto\": \"Teste de criação de pauta 11\"\r\n    },\r\n    {\r\n        \"assunto\": \"Teste de criação de pauta 12\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/pautas/adicionar-em-massa",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pautas",
+						"adicionar-em-massa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pautas: Listar todas as pautas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/pautas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pautas"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "cpfGerado",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "idPautaCriada",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "opcaoVotacao",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
